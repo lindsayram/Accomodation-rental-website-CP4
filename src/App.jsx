@@ -125,14 +125,16 @@ import { BrowserRouter as Router, Route, Routes }
 from "react-router-dom";
 
 import Home from './pages/home';
-import About from './pages/about';
+import Details from './pages/Details';
+// import NotFound from './pages/notfound';
 
 function App() {
   return (
     <Router>
       <Routes>
         <Route path='/' element={<Home/>} />
-        <Route path='/' element={<About/>} />
+        <Route path='/details' element={<Details/>} />
+        {/* <Route path='*' element={<NotFound/>} /> */}
       </Routes>
     </Router>
   );
