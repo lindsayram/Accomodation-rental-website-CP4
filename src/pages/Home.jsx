@@ -1,4 +1,5 @@
 import Navbar from "../components/navbar/navbar"
+import Intro from "../components/intro/intro"
 import Footer from "../components/footer/footer"
 
 function Home() {
@@ -8,6 +9,10 @@ function Home() {
                 <h1>Kasa</h1>
                 <Navbar/>
             </header>
+
+            <main>
+                <Intro />
+            </main>
 
             <Footer/>
         </>

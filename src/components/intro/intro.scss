@@ -1,0 +1,21 @@
+@import '../../styles/variables.scss';
+
+#introduction{
+    background-image: $bgIntro;
+    text-align: center;
+    padding: 50px;
+
+    h2{
+        font-weight: 700;
+        font-size: 48px;
+        margin: 20px;
+    }
+
+    p{
+        font-size: $primarySize;
+        color: $pColor;
+        max-width: 600px;
+        text-align: center;
+        margin: auto;
+    }
+}
