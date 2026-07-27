@@ -1,5 +1,6 @@
 import Navbar from "../components/navbar/navbar"
 import Intro from "../components/intro/intro"
+import Card from "../components/cards/cards"
 import Footer from "../components/footer/footer"
 
 function Home() {
@@ -12,6 +13,7 @@ function Home() {
 
             <main>
                 <Intro />
+                <Card/>
             </main>
 
             <Footer/>
