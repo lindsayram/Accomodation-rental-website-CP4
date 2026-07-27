@@ -1,0 +1,39 @@
+@import '../../styles/variables.scss';
+@import '../../styles/global.scss';
+
+footer{
+    background-color: $h2-footerColor;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    color: $linkFooter;
+    padding: 30px;
+
+    .liens{
+        display: grid;
+        text-align: justify;
+        margin: auto; 
+        gap: 10px;
+
+        h3{
+            margin-bottom: 5px;
+            font-weight: $h3Weight;
+            font-size: $h3Size;
+        }
+
+        a{
+            color: $linkFooter; 
+            font-size: $linkSize;
+            font-weight: $primaryWeight;
+        }
+    }
+
+    p{
+        grid-column: 2;
+        color: $copyrightColor;
+        font-size: $linkSize;
+        text-align: center;
+        border-top: 1px solid $copyrightColor;
+        padding: 16px 8px;
+        margin-top: 25px;
+    }
+}
