@@ -1,11 +1,14 @@
+import Navbar from "../components/navbar/navbar"
 import Footer from "../components/footer/footer"
 
 function Home() {
     return(
         <>
             <header>
-            <h1>Bienvenue</h1>
+                <h1>Kasa</h1>
+                <Navbar/>
             </header>
+            
             <Footer/>
         </>
     )

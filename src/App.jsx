@@ -125,7 +125,7 @@ import { BrowserRouter as Router, Route, Routes }
 from "react-router-dom";
 
 import Home from './pages/home';
-import Details from './pages/Details';
+import Details from './pages/details';
 // import NotFound from './pages/notfound';
 
 function App() {

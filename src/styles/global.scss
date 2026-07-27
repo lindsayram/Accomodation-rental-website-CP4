@@ -1,0 +1,27 @@
+@import './variables.scss';
+
+*{
+    margin: 0;   
+    a{
+        text-decoration: none;
+    }
+}
+
+
+body{
+    header{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        
+        h1{
+            font-family: $h1font;
+            font-size: $h1Size;
+            font-weight: $primaryWeight;
+            color: $h1Color;
+        }
+
+        
+    }
+    
+}

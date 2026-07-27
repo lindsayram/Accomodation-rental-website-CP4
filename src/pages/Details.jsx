@@ -1,8 +1,16 @@
+import Navbar from "../components/navbar/navbar"
 import Footer from "../components/footer/footer"
 
 function Details() {
     return(
-        <Footer/>
+        <>
+            <header>
+                <h1>Kasa</h1>
+                <Navbar/>
+            </header>
+            
+            <Footer/>
+        </>
     )
 }
 
