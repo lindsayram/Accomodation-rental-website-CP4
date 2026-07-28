@@ -2,10 +2,39 @@
 @import '../../styles/variables.scss';
 
 #details{
-    padding-bottom: 30em; 
+    padding-bottom: 30em;
+    max-width: 900px;
+    margin: auto; 
 
     #slider{
         margin: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img{
+            height: 400px;
+            margin: auto;
+            position: relative;
+        }
+        div{
+            button{
+                border-style: none;
+                border-radius: 50px;
+                background-color: $bg;
+                width: 40px;
+                padding: 12px;
+                position:absolute;
+                cursor: pointer;
+
+                .fa-arrow-left{
+                    right: 400px;
+                }
+                .fa-arrow-right{
+                    left: 400px;
+                }
+            }
+        }
     }  
 
     #infos-details{

@@ -22,8 +22,10 @@ function Carousel() {
     return (
         <>  <div id="slider">
                 <img src={rental.pictures[count]} alt={rental.title} />
-                <button onClick={prev}>Précédent</button> /*Mettre des symboles de flèches*/
-                <button onClick={next}>Suivant</button>
+                <div>
+                    <button onClick={prev}><i class="fa-solid fa-arrow-left"></i></button>
+                    <button onClick={next}><i class="fa-solid fa-arrow-right"></i></button>
+                </div>
             </div>
             
             <article id="infos-details">
