@@ -23,14 +23,14 @@ function Carousel() {
         <>  <div id="slider">
                 <img src={rental.pictures[count]} alt={rental.title} />
                 <div>
-                    <button onClick={prev}><i class="fa-solid fa-arrow-left"></i></button>
-                    <button onClick={next}><i class="fa-solid fa-arrow-right"></i></button>
+                    <button id="prev" onClick={prev}><i className="fa-solid fa-arrow-left"></i></button>
+                    <button id="next"onClick={next}><i className="fa-solid fa-arrow-right"></i></button>
                 </div>
             </div>
             
             <article id="infos-details">
                 <h2>{rental.title}</h2>
-                <p><i class="fa-solid fa-location-dot"></i>{rental.location}</p>
+                <p><i className="fa-solid fa-location-dot"></i>{rental.location}</p>
                 <ul>
                     <li>{rental.tags[0]}</li>
                     <li>{rental.tags[1]}</li> 

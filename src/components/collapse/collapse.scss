@@ -3,6 +3,7 @@
 
 #collapses{
     max-width: 850px;
+    padding: 0 30px;
 
     .collapse{
         border-radius: 16px;
@@ -18,11 +19,21 @@
                 font-size: $linkSize;
                 font-weight: $h3Weight;
             }
+
+            button{
+                border-style: none;
+                background: $bg;
+                cursor: pointer;
+            }
+        }     
+
+        p{
+            margin: 10px 0;
         }
 
-        button{
-            border-style: none;
-            background: $bg;
+        ul{
+            margin: 10px 0;
+            list-style: none;
         }
     }
 }

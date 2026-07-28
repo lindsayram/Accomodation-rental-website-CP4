@@ -18,6 +18,7 @@
 body{
     max-width: 1440px;
     margin: auto;
+    
 
     header{
         display: flex;
@@ -34,4 +35,28 @@ body{
             }           
         }      
     }   
+
+    #pageerreur{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        ;
+
+        h1{
+            font-size: $h2Size;
+            color: $h1Color;
+        }
+
+        p{
+            font-size: $primarySize;
+        }
+
+        a{
+            background-image: $bgIntro;
+            padding: 7px;
+            border-radius: 5px;
+        }
+    }
 }

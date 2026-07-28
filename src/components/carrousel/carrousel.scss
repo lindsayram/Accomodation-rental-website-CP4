@@ -18,28 +18,35 @@
             position: relative;
         }
         div{
-            button{
+            #prev{
                 border-style: none;
                 border-radius: 50px;
                 background-color: $bg;
                 width: 40px;
                 padding: 12px;
-                position:absolute;
                 cursor: pointer;
+                position:absolute;
+                left: 28%;
 
-                .fa-arrow-left{
-                    right: 400px;
-                }
-                .fa-arrow-right{
-                    left: 400px;
-                }
+            }    
+            #next{
+                border-style: none;
+                border-radius: 50px;
+                background-color: $bg;
+                width: 40px;
+                padding: 12px;
+                cursor: pointer;
+                position:absolute;
+                right: 28%;
             }
         }
-    }  
+    }
+  
 
     #infos-details{
         display: grid;
         gap: 20px;
+        padding: 30px;
 
         h2{
             font-size: $h2SizeDetails;
