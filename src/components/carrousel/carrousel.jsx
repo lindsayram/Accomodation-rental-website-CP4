@@ -33,6 +33,7 @@ function Carousel() {
             <div>
                 <img src={rental.host['picture']} alt="" />
                 <p>{rental.host['name']}</p>
+                <p>Hôte depuis 3 ans</p>
             </div>
         </>
     )

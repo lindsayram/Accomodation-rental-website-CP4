@@ -1,6 +1,7 @@
 // import { useParams } from "react-router-dom"
 import Navbar from "../components/navbar/navbar"
 import Carousel from "../components/carrousel/carrousel";
+import Collapse from "../components/collapse/collapse";
 import Footer from "../components/footer/footer"
 import { Link } from "react-router-dom";
 
@@ -13,8 +14,8 @@ function Details() {
                 <Navbar/>
             </header>
             <section>
-                {/* <h2>{params.id}</h2> */}
                 <Carousel/>
+                <Collapse/>
             </section>
             <Footer/>
         </>
