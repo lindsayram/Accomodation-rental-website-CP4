@@ -125,15 +125,15 @@ import { BrowserRouter as Router, Route, Routes }
 from "react-router-dom";
 
 import Home from './pages/home';
-import Details from './pages/details';
-// import NotFound from './pages/notfound';
+import Details from './pages/logement';
+// import NotFound from './pages/404';
 
 function App() {
   return (
     <Router>
       <Routes>
         <Route path='/' element={<Home/>} />
-        <Route path='/details' element={<Details/>} />
+        <Route path='/logement/:id' element={<Details/>} />
         {/* <Route path='*' element={<NotFound/>} /> */}
       </Routes>
     </Router>

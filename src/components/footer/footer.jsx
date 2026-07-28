@@ -1,7 +1,7 @@
 import {Link} from 'react-router-dom';
 import './footer.scss';
 
-const  Footer = () => (
+const Footer = () => (
     <footer>
         <div className='liens'>
             <h3>A propos de Kasa</h3>
