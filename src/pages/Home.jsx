@@ -1,34 +1,24 @@
-<<<<<<< HEAD
 // import { useState, useEffect } from "react";
 import Navbar from "../components/navbar/navbar";
 import Intro from "../components/intro/intro";
 import Card from "../components/cards/cards";
 import Footer from "../components/footer/footer";
-=======
-import Navbar from "../components/navbar/navbar"
-import Intro from "../components/intro/intro"
-import Card from "../components/cards/cards"
-import Footer from "../components/footer/footer"
->>>>>>> 0b603c55e92acc18ba3f45efbbd74876e26e112e
+import { Link } from "react-router-dom";
 
 function Home() {
     
     return(
         <>
             <header className="">
-                <h1>Kasa</h1>
+                <h1><Link to='/'>Kasa</Link></h1>
                 <Navbar/>
             </header>
 
             <main>
                 <Intro />
-<<<<<<< HEAD
                 <section id="accomodations">
                     <Card/>
                 </section>
-=======
-                <Card/>
->>>>>>> 0b603c55e92acc18ba3f45efbbd74876e26e112e
             </main>
 
             <Footer/>

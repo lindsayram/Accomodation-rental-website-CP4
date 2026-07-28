@@ -1,12 +1,10 @@
 import ChildCard from './childcard';
 import data from '../../data/logements.json';
-import { Link } from 'react-router-dom';
 
 function Card() {
    
     return (
         <div>
-        {/* // <Link to={`/details/${element.id}`}>             */}
             {data.map(element => (
                 <ChildCard
                     key={element.id}
@@ -19,7 +17,6 @@ function Card() {
                     rating={element.rating}
                 />
             ))}
-        {/* </Link> */}
         </div>
     )
 }

@@ -1,51 +1,41 @@
-import { useState, useEffect, useParams } from "react"
+import { useParams } from "react-router-dom";
+import { useState } from "react";
 import data from '../../data/logements.json'
 
-function Carrousel () {
+
+function Carousel() {
     const [count, setCount] = useState(0)
-    let id = useParams()
-    const pictures = data[id].pictures
+
+    let params = useParams();   
+    let rental = data.find(element =>element.id == params.id)
 
     const next = () =>{
-        if(count> pictures.length-1){
-            setCount(0)
-        } else {
-            setCount(count + 1)
-        }
+        setCount((index) => (index) === rental.pictures.length-1 ? 0 : index + 1
+        )
     }
 
     const prev = () => {
-        if(count< 0) {
-            setCount(pictures.length)
-        } else {
-            setCount(count - 1)
-        }
+        setCount((index) => (index) === 0 ? 1 : index -1
+        )
     }
 
     return (
-        <section id="details">
+        <>
+            <img src={rental.pictures[count]} alt={rental.title} />
+            <button onClick={prev}>Précédent</button> /*Mettre des symboles de flèches*/
+            <button onClick={next}>Suivant</button>
+            <h2>{rental.title}</h2>
+            <p>{rental.location}</p>
+            <ul>
+                <li>{rental.tags[0]}</li>
+                <li>{rental.tags[1]}</li> 
+            </ul>
             <div>
-                <img src={pictures[count]} alt={data.title} />
-                <button onClick={prev}><img src="../../assets/telecharger-arrow.png" alt="arrow previous"/></button>
-                <button onClick={next}><img src="../../assets/telecharger-arrow.png" alt="arrow previous"/></button>
+                <img src={rental.host['picture']} alt="" />
+                <p>{rental.host['name']}</p>
             </div>
-            <div>
-                <h2>{data.title}</h2>
-                <p>{data.location}</p>
-                <ul>
-                    <li>{data.tags[0]}</li>
-                    <li>{data.tags[1]}</li>
-                </ul>
-                <div>
-                    <img src={data.host.picture} alt="host" />
-                    <p>{data.host.name}</p>
-                </div>
-                <div>
-                    {/* collapse */}
-                </div>
-            </div>
-        </section>
+        </>
     )
 }
 
-export default Carrousel
+export default Carousel

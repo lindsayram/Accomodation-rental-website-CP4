@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 function ChildCard(props) {
     return (
         <div>
-            <Link to={`/details/${props.id}`}>
+            <Link to={`/logement/${props.id}`}>
                 <img src={props.picture} alt={props.title}/>
                 <h3>{props.title}</h3>
                 <p>{props.location}</p>
