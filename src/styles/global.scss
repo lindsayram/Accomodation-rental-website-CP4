@@ -5,6 +5,11 @@
     font-family: $primaryfont;
     font-weight: $primaryWeight;
 
+    img{
+        object-fit: cover;
+        width: 100%;
+    }
+
     a{
         text-decoration: none;
     }
@@ -21,12 +26,11 @@ body{
         padding: 15px 0;
 
         h1{
-            font-family: $h1font;
-            font-size: $h1Size;
-            color: $h1Color;
-        }
-
-        
-    }
-    
+            a{
+                font-family: $h1font;
+                font-size: $h1Size;
+                color: $h1Color;
+            }           
+        }      
+    }   
 }

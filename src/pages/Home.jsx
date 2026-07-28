@@ -16,9 +16,7 @@ function Home() {
 
             <main>
                 <Intro />
-                <section id="accomodations">
-                    <Card/>
-                </section>
+                <Card/>
             </main>
 
             <Footer/>

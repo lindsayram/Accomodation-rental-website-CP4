@@ -1,0 +1,59 @@
+@import '../../styles/variables.scss';
+
+#accomodations{
+    padding: 50px;
+
+    #cards{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 25px;
+        max-width: 1210px;
+        margin: auto;
+
+        .card{
+            border-radius: 16px;
+            box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.1);
+
+
+            img{
+                border-radius: 16px 16px 0 0;
+                height: 250px;
+            }
+
+            .infoZone{
+                padding: 20px;
+                display: grid;
+                gap: 12px;
+
+                h3{
+                    font-weight: $h3Weight;
+                    font-size: $primaryfont;
+                }
+
+                p{
+                    font-size: $placeSize;
+                    color: $pColor;
+
+                    i{
+                        margin-right: 5px;
+                    }
+                }
+
+                ul{
+                    display: flex;
+                    list-style: none;
+                    gap: 15px;
+                    padding: 0;
+
+                    li{
+                        color:$bg;
+                        background-image: $label;
+                        padding: 3px 7px;
+                        border-radius: 11px;
+                        font-size:$labelSize;
+                    }
+                }
+            }
+        }
+    }
+}
