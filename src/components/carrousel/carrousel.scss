@@ -1,0 +1,55 @@
+@import '../../styles/global.scss';
+@import '../../styles/variables.scss';
+
+#details{
+    padding-bottom: 30em; 
+
+    #slider{
+        margin: 10px;
+    }  
+
+    #infos-details{
+        display: grid;
+        gap: 20px;
+
+        h2{
+            font-size: $h2SizeDetails;
+            font-weight: $h2Weight;
+        }
+
+        ul{
+            @extend %tags-base;
+
+            li{
+                padding: 10px 13px;
+                font-size: $placeSize;
+            }
+        }
+
+        #host{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            
+            img{
+                border-radius: 50px;
+                width: 64px;
+            }
+
+            div{
+                display:grid;
+                gap: 7px;
+
+                #identity{
+                    font-weight: $h3Weight;
+                    font-size: $linkSize;
+                }
+
+                p{
+                    font-size: $placeSize;
+                }
+            }
+        }
+    }
+    
+}

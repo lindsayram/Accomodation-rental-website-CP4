@@ -1,0 +1,28 @@
+@import '../../styles/global.scss';
+@import '../../styles/variables.scss';
+
+#collapses{
+    max-width: 850px;
+
+    .collapse{
+        border-radius: 16px;
+        border: $borderCollapse;
+        padding: 16px;
+        margin-top: 40px;
+
+        div{
+            display: flex;
+            justify-content: space-between;
+
+            h3{
+                font-size: $linkSize;
+                font-weight: $h3Weight;
+            }
+        }
+
+        button{
+            border-style: none;
+            background: $bg;
+        }
+    }
+}

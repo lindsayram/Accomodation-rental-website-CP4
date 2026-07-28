@@ -40,16 +40,10 @@
                 }
 
                 ul{
-                    display: flex;
-                    list-style: none;
-                    gap: 15px;
-                    padding: 0;
+                    @extend %tags-base;
 
                     li{
-                        color:$bg;
-                        background-image: $label;
-                        padding: 3px 7px;
-                        border-radius: 11px;
+                        padding: 5px 10px;
                         font-size:$labelSize;
                     }
                 }

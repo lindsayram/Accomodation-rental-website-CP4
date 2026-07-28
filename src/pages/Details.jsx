@@ -13,7 +13,7 @@ function Details() {
                 <h1><Link to='/'>Kasa</Link></h1>
                 <Navbar/>
             </header>
-            <section>
+            <section id="details">
                 <Carousel/>
                 <Collapse/>
             </section>

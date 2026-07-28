@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useState } from "react";
-import data from '../../data/logements.json'
-
+import data from '../../data/logements.json';
+import './carrousel.scss';
 
 function Carousel() {
     const [count, setCount] = useState(0)
@@ -20,21 +20,27 @@ function Carousel() {
     }
 
     return (
-        <>
-            <img src={rental.pictures[count]} alt={rental.title} />
-            <button onClick={prev}>Précédent</button> /*Mettre des symboles de flèches*/
-            <button onClick={next}>Suivant</button>
-            <h2>{rental.title}</h2>
-            <p>{rental.location}</p>
-            <ul>
-                <li>{rental.tags[0]}</li>
-                <li>{rental.tags[1]}</li> 
-            </ul>
-            <div>
-                <img src={rental.host['picture']} alt="" />
-                <p>{rental.host['name']}</p>
-                <p>Hôte depuis 3 ans</p>
+        <>  <div id="slider">
+                <img src={rental.pictures[count]} alt={rental.title} />
+                <button onClick={prev}>Précédent</button> /*Mettre des symboles de flèches*/
+                <button onClick={next}>Suivant</button>
             </div>
+            
+            <article id="infos-details">
+                <h2>{rental.title}</h2>
+                <p><i class="fa-solid fa-location-dot"></i>{rental.location}</p>
+                <ul>
+                    <li>{rental.tags[0]}</li>
+                    <li>{rental.tags[1]}</li> 
+                </ul>
+                <div id="host">
+                    <img src={rental.host['picture']} alt="" />
+                    <div>
+                        <p id="identity">{rental.host['name']}</p>
+                        <p>Hôte depuis 3 ans</p>
+                    </div>
+                </div>
+            </article>   
         </>
     )
 }

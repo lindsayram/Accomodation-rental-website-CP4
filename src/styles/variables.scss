@@ -12,6 +12,8 @@ $linkFooter: rgba(209, 213, 219, 1);
 $pColor:rgba(75, 85, 99, 1);
 $copyrightColor: rgba(156, 163, 175, 1);
 
+$borderCollapse: 1px solid rgba(229, 231, 235, 1);
+
 
 // Fonts
 $h1font: "Pacifico", cursive;
@@ -25,8 +27,25 @@ $primarySize: 20px;
 $linkSize: 16px;
 $placeSize: 14px;
 $labelSize: 12px;
+$h2SizeDetails: 30px;
 
 // Weight
 $primaryWeight: 400;
 $h2Weight: 700;
 $h3Weight: 600;
+
+
+// Bases
+
+%tags-base{
+    display: flex;
+    list-style: none;
+    gap: 15px;
+    padding: 0;
+
+    li{
+        color:$bg;
+        background-image: $label;
+        border-radius: 50px;       
+    }
+}
