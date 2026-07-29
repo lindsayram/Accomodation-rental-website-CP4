@@ -13,40 +13,28 @@
     a{
         text-decoration: none;
     }
+
+    ul{
+        list-style: none;
+        padding: 0;
+    }
 }
 
 body{
-    max-width: 1440px;
-    margin: auto;
-    
-
-    header{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 20px;
-        border-bottom: $borderCollapse;
-
-        h1{
-            a{
-                font-family: $h1font;
-                font-size: $h1Size;
-                color: $h1Color;
-            }           
-        }      
-    }   
+       
 
     #pageerreur{
-        text-align: center;
         display: flex;
         flex-direction: column;
+        gap: 20px;
+        justify-content: center;
         align-items: center;
-        gap: 15px;
-        ;
+        height: 100vh;
 
         h1{
             font-size: $h2Size;
             color: $h1Color;
+            font-weight: $h3Weight;
         }
 
         p{
@@ -54,9 +42,11 @@ body{
         }
 
         a{
-            background-image: $bgIntro;
+            background-color: $h1Color;
             padding: 7px;
             border-radius: 5px;
+            color: $bg;
+
         }
     }
 }

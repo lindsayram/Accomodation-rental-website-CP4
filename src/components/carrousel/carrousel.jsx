@@ -6,17 +6,21 @@ import './carrousel.scss';
 function Carousel() {
     const [count, setCount] = useState(0)
 
+    // Récupérer l'id dans l'URL
     let params = useParams();   
     let rental = data.find(element =>element.id == params.id)
 
+    // Créer un tableau pour déterminer le nb d'étoiles
+    const stars =Array(5).fill(rental.rating)
+
+    // Bouton next
     const next = () =>{
-        setCount((index) => (index) === rental.pictures.length-1 ? 0 : index + 1
-        )
+        setCount((index) => (index) === rental.pictures.length-1 ? 0 : index + 1)
     }
 
+    // Bouton précédent
     const prev = () => {
-        setCount((index) => (index) === 0 ? 1 : index -1
-        )
+        setCount((index) => (index) === 0 ? 1 : index -1)
     }
 
     return (
@@ -31,10 +35,18 @@ function Carousel() {
             <article id="infos-details">
                 <h2>{rental.title}</h2>
                 <p><i className="fa-solid fa-location-dot"></i>{rental.location}</p>
-                <ul>
+                <ul className="tags">
                     <li>{rental.tags[0]}</li>
                     <li>{rental.tags[1]}</li> 
                 </ul>
+                <ul className="rating">
+                    {stars.map((item, index) =>
+                        index < rental.rating? 
+                        <li key={index}><i className="fa-solid fa-star star-yellow"></i></li> : 
+                        <li key={index}><i className="fa-solid fa-star star-empty"></i></li> 
+                    )}
+                    <li>({rental.rating})</li>
+                </ul> 
                 <div id="host">
                     <img src={rental.host['picture']} alt="" />
                     <div>

@@ -1,4 +1,3 @@
-@import '../../styles/global.scss';
 @import '../../styles/variables.scss';
 
 #collapses{
@@ -23,7 +22,11 @@
             button{
                 border-style: none;
                 background: $bg;
-                cursor: pointer;
+                cursor: pointer;   
+            }
+
+            .rotate{
+                transform: rotate(180deg);
             }
         }     
 
@@ -33,7 +36,6 @@
 
         ul{
             margin: 10px 0;
-            list-style: none;
         }
     }
 }

@@ -1,8 +1,30 @@
 @import '../../styles/variables.scss';
-@import '../../styles/global.scss';
 
-a{
-    color:$linkNavbar;
-    font-size: $linkSize;
-    margin-right: 20px;
+nav{
+    a{
+        color:$linkNavbar;
+        font-size: $linkSize;
+        margin-right: 20px;
+    }
+
+    button{
+        display: none;
+    }
+}
+
+// Mobile format (320px)
+@media screen and (max-width: 768px) {
+    nav{
+        a{
+            display:none
+        }
+
+        button{
+            display: block;
+            border-style: none;
+            background-color: $bg;
+            cursor: pointer;
+        }
+    }
+    
 }

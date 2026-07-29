@@ -6,26 +6,33 @@ import './collapse.scss';
 function Collapse () {
     const [descVisible, setDescVisible] = useState(null)
     const [equipVisible, setEquipVisible] = useState(null)
+    
+    const [isRotate, setRotate] = useState(false)
+    const [isRotate2, setRotate2] = useState(false)
 
     let params = useParams()
     const infos = data.find(item => item.id == params.id)
-    const equipments= infos.equipments
 
     const displayDesc = () => {
         setDescVisible(!descVisible)
+
+        setRotate(!isRotate)    
     }
+
     const displayEquip = () => {
         setEquipVisible(!equipVisible)
+
+        setRotate2(!isRotate2)
     }
+    
     // sélectionner element HTML
     // faire une boucle pour insérer dans <li>
-     console.log(equipments)
     return(
         <div id='collapses'>
             <article className='collapse'>
                 <div>
                     <h3>Description</h3>
-                    <button onClick={displayDesc}><i className="fa-solid fa-arrow-down"></i></button>
+                    <button onClick={displayDesc} className={isRotate? 'rotate':  ''}><i className="fa-solid fa-arrow-down"></i></button>
                 </div>
                 {descVisible && <p>{infos.description}</p>}
             </article>
@@ -33,7 +40,7 @@ function Collapse () {
             <article className='collapse'>
                 <div>
                     <h3>Equipements</h3>
-                    <button onClick={displayEquip}><i className="fa-solid fa-arrow-down"></i></button>
+                    <button onClick={displayEquip} className={isRotate2? 'rotate':  ''}><i className="fa-solid fa-arrow-down"></i></button>
                 </div>               
                 {equipVisible && 
                     <ul>

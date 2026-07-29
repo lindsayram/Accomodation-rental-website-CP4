@@ -39,7 +39,7 @@
                     }
                 }
 
-                ul{
+                .tags{
                     @extend %tags-base;
 
                     li{
@@ -47,7 +47,39 @@
                         font-size:$labelSize;
                     }
                 }
+
+                .rating{
+                    display: flex;
+
+                    .star-yellow{
+                        color:$starColor;
+                    }
+
+                    .star-empty{
+                        color: $linkFooter;
+                    }
+
+                    #note{
+                        color: $h2-footerColor;
+                    }
+                }
             }
+        }
+    }
+}
+// Tablet format (1024px-768px)
+@media screen and (max-width: 1024px) {
+    #accomodations{
+        #cards{
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}
+// Mobile format (768px-320px)
+@media screen and (max-width: 768px) {
+    #accomodations{
+        #cards{
+            grid-template-columns: 1fr;
         }
     }
 }

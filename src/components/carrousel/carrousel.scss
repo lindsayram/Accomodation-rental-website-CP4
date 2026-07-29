@@ -1,4 +1,3 @@
-@import '../../styles/global.scss';
 @import '../../styles/variables.scss';
 
 #details{
@@ -19,25 +18,13 @@
         }
         div{
             #prev{
-                border-style: none;
-                border-radius: 50px;
-                background-color: $bg;
-                width: 40px;
-                padding: 12px;
-                cursor: pointer;
-                position:absolute;
-                left: 28%;
+                @extend %button-arrow-base;
+                left: 17%;
+            } 
 
-            }    
             #next{
-                border-style: none;
-                border-radius: 50px;
-                background-color: $bg;
-                width: 40px;
-                padding: 12px;
-                cursor: pointer;
-                position:absolute;
-                right: 28%;
+                @extend %button-arrow-base;
+                right: 17%;
             }
         }
     }
@@ -53,13 +40,25 @@
             font-weight: $h2Weight;
         }
 
-        ul{
+        .tags{
             @extend %tags-base;
 
             li{
                 padding: 10px 13px;
                 font-size: $placeSize;
             }
+        }
+
+        .rating{
+            display: flex;
+
+            .star-yellow{
+                color:$starColor;
+            }
+
+            .star-empty{
+                color: $linkFooter;
+            }       
         }
 
         #host{
@@ -86,6 +85,41 @@
                 }
             }
         }
+    }    
+}
+
+// Mobile format (1024px-768px)
+@media screen and (max-width: 1024px) {
+    #details{
+        #slider{
+            
+            div{
+                #prev{
+                    left: 9%;
+                } 
+
+                #next{
+                    right: 9%;
+                }
+            }
+        }
     }
-    
+}
+
+// Mobile format (768px-320px)
+@media screen and (max-width: 768px) {
+    #details{
+        #slider{
+            
+            div{
+                #prev{
+                    left: 3%;
+                } 
+
+                #next{
+                    right: 3%;
+                }
+            }
+        }
+    }
 }
