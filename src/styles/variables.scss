@@ -6,7 +6,7 @@ $bg: rgba(255, 255, 255, 1);
 $bgIntro: linear-gradient(100.62deg, #F5F7FA 0%, #C3CFE2 100%);
 $label: linear-gradient(109.69deg, #667EEA 0%, #764BA2 100%);
 
-$h1Color: rgba(255, 107, 107, 1);
+$logoColor: rgba(255, 107, 107, 1);
 $h2-footerColor: rgba(31, 41, 55, 1);
 
 $linkNavbar: rgba(55, 65, 81, 1);
@@ -25,14 +25,14 @@ $h1font: "Pacifico", cursive;
 $primaryfont: "Inter", sans-serif;
 
 // Size
-$h1Size: 24px;
-$h2Size: 48px;
+$labelSize: 12px;
+$placeSize: 14px;
+$linkSize: 16px;
 $h3Size: 18px;
 $primarySize: 20px;
-$linkSize: 16px;
-$placeSize: 14px;
-$labelSize: 12px;
+$h1Size: 24px;
 $h2SizeDetails: 30px;
+$h2Size: 48px;
 
 // Weight
 $primaryWeight: 400;

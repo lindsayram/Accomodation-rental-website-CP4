@@ -43,9 +43,9 @@ function Collapse () {
                     <button onClick={displayEquip} className={isRotate2? 'rotate':  ''}><i className="fa-solid fa-arrow-down"></i></button>
                 </div>               
                 {equipVisible && 
-                    <ul>
+                    <ul id='equipment'>
                         {infos.equipments.map((element, index) => 
-                            <li key={index}>{element}</li>
+                            <li key={index}><i class="fa-solid fa-circle-check"></i>{element}</li>
                         )}
                     </ul>
                 }               

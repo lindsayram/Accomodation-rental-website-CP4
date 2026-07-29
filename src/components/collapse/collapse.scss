@@ -34,8 +34,22 @@
             margin: 10px 0;
         }
 
-        ul{
+        #equipment{
             margin: 10px 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
         }
     }
+}
+
+// Mobile format (768px - 320px)
+@media screen and (max-width: 768px) {
+    #collapses{
+        .collapse{
+            #equipment{
+                grid-template-columns: 1fr;
+            }
+        }
+    }   
 }

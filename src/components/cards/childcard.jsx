@@ -9,7 +9,7 @@ function ChildCard(props) {
                 <img src={props.picture} alt={props.title}/>
                 <div className="infoZone">
                     <h3>{props.title}</h3>
-                    <p><i class="fa-solid fa-location-dot"></i>{props.location}</p>
+                    <p><i className="fa-solid fa-location-dot"></i>{props.location}</p>
                     <ul className="tags">
                         <li>{props.tag1}</li>
                         <li>{props.tag2}</li>
@@ -18,8 +18,8 @@ function ChildCard(props) {
                     <ul className="rating">
                         {stars.map((item, index) =>
                             index < props.rating? 
-                            <li key={index}><i class="fa-solid fa-star star-yellow"></i></li> : 
-                            <li><i class="fa-solid fa-star star-empty"></i></li> 
+                            <li key={index}><i className="fa-solid fa-star star-yellow"></i></li> : 
+                            <li key={index}><i className="fa-solid fa-star star-empty"></i></li> 
                         )}
                         <li id="note">({props.rating})</li>
                     </ul>   

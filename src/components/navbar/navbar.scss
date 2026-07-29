@@ -1,30 +1,63 @@
 @import '../../styles/variables.scss';
 
-nav{
-    a{
-        color:$linkNavbar;
-        font-size: $linkSize;
-        margin-right: 20px;
-    }
+.navbar {
+  border-radius: 0.5em;
 
-    button{
-        display: none;
-    }
-}
+  .toggle {
+    cursor: pointer;
+    display: none;
+    font-size: $h1Size;
+  }
 
-// Mobile format (320px)
+  .linkmenu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+
+    li {
+      position: relative;
+      padding: $placeSize;
+
+      a {
+        color: $linkNavbar;
+        text-decoration: none;
+      }
+    }
+  }
+} 
+
+// Mobile Format (768px - 320px)
 @media screen and (max-width: 768px) {
-    nav{
-        a{
-            display:none
-        }
-
-        button{
+    .navbar {
+        .toggle {           
             display: block;
             border-style: none;
             background-color: $bg;
-            cursor: pointer;
+        }
+
+        .linkmenu{
+            flex-direction: column;
+            background-color: $logoColor;
+            z-index: 1;
+            display: none;
+
+            &.navbar-open {
+                display: flex;
+                position: absolute;
+                right: 0px;
+                top: 82px;
+                top: 63px;
+                padding: 40px;
+                border-radius: 6px;
+
+                a{
+                    color: $bg;
+                }
+            }
         }
     }
-    
 }

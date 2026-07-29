@@ -22,7 +22,6 @@
 
 body{
        
-
     #pageerreur{
         display: flex;
         flex-direction: column;
@@ -33,7 +32,7 @@ body{
 
         h1{
             font-size: $h2Size;
-            color: $h1Color;
+            color: $logoColor;
             font-weight: $h3Weight;
         }
 
@@ -42,11 +41,10 @@ body{
         }
 
         a{
-            background-color: $h1Color;
+            background-color: $logoColor;
             padding: 7px;
             border-radius: 5px;
             color: $bg;
-
         }
     }
 }

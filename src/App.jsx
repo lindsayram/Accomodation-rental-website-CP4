@@ -3,7 +3,7 @@ from "react-router-dom";
 
 import Home from './pages/Home';
 import Details from './pages/Details';
-import NotFound from './pages/404';
+import NotFound from './pages/NotFound';
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home/>} />
         <Route path='/logement/:id' element={<Details/>} />
-        <Route path='/*' element={<NotFound/>} />
+        <Route path='*' element={<NotFound/>} />
       </Routes>
     </Router>
   );
