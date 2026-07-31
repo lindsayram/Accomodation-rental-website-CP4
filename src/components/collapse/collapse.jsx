@@ -25,8 +25,6 @@ function Collapse () {
         setRotate2(!isRotate2)
     }
     
-    // sélectionner element HTML
-    // faire une boucle pour insérer dans <li>
     return(
         <div id='collapses'>
             <article className='collapse'>
@@ -42,13 +40,13 @@ function Collapse () {
                     <h3>Equipements</h3>
                     <button onClick={displayEquip} className={isRotate2? 'rotate':  ''}><i className="fa-solid fa-arrow-down"></i></button>
                 </div>               
-                {equipVisible && 
-                    <ul id='equipment'>
-                        {infos.equipments.map((element, index) => 
-                            <li key={index}><i class="fa-solid fa-circle-check"></i>{element}</li>
-                        )}
-                    </ul>
-                }               
+                    {equipVisible && 
+                        <ul id='equipment'>
+                            {infos.equipments.map((element, index) => 
+                                <li key={index}><i class="fa-solid fa-circle-check"></i>{element}</li>
+                            )}
+                        </ul>
+                    }               
             </article>  
         </div>
     )
